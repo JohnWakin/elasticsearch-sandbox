@@ -6,8 +6,8 @@ This Demo allows one to run the Search examples from https://github.com/Transfor
 
 ## Screenshots
 
-[Search All](docs/screenshots/search-all.png)
-[Search Filter](docs/screenshots/search-filter.png)
+![Search All](docs/screenshots/search-all.png)
+![Search Filter](docs/screenshots/search-filter.png)
 
 ## How to run a private instance of the Application
 
