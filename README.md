@@ -1,8 +1,8 @@
 # ElasticSearch Demo
 
-Application http://elasticsearch-sandbox.herokuapp.com/
+URL: http://elasticsearch-sandbox.herokuapp.com/
 
-This Demo allows one to run the Search examples from https://github.com/TransformCore/elasticsearch-example-docs
+This Demo allows one to run the Search Examples from https://github.com/TransformCore/elasticsearch-example-docs
 
 ## Screenshots
 
@@ -29,6 +29,6 @@ This Demo allows one to run the Search examples from https://github.com/Transfor
 
 Example Searches with **Dummy Data** https://github.com/TransformCore/elasticsearch-example-docs
 
-## How to run Test Suite
+### How to run Test Suite
 
 `vendor/bin/codecept run`
