@@ -32,3 +32,49 @@ Example Searches with **Dummy Data** https://github.com/TransformCore/elasticsea
 ### How to run Test Suite
 
 `vendor/bin/codecept run`
+
+Output:
+```
+vendor/bin/codecept run
+Codeception PHP Testing Framework v2.0.5
+Powered by PHPUnit 4.2.6 by Sebastian Bergmann.
+
+Acceptance Tests (0) ------------------------
+---------------------------------------------
+
+Functional Tests (0) ------------------------
+---------------------------------------------
+
+Unit Tests (10) ---------------------------------------------------------------------------------------------------------------------------------------
+Trying to test create service (ApplicationTest\Factory\ElasticSearchClientTest::testCreateService)                                                Ok
+Trying to test create service (ApplicationTest\Factory\ElasticSearchServiceTest::testCreateService)                                               Ok
+Trying to test form (ApplicationTest\Form\SearchFormTest::testForm)                                                                               Ok
+Trying to test instance (ApplicationTest\Model\Entity\SearchEntityTest::testInstance)                                                             Ok
+Trying to test exchange array empty (ApplicationTest\Model\Entity\SearchEntityTest::testExchangeArrayEmpty)                                       Ok
+Trying to test exchange array (ApplicationTest\Model\Entity\SearchEntityTest::testExchangeArray)                                                  Ok
+Trying to test get input filter (ApplicationTest\Model\Entity\SearchEntityTest::testGetInputFilter)                                               Ok
+Trying to test validation (ApplicationTest\Model\Entity\SearchEntityTest::testValidation)                                                         Ok
+Trying to test instance (ApplicationTest\Service\ElasticSearchTest::testInstance)                                                                 Ok
+Trying to test search (ApplicationTest\Service\ElasticSearchTest::testSearch)                                                                     Ok
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ApplicationTest.acceptance Tests (2) ----------------------------------------------------------------------------------------------------------------------------------------------
+Trying to ensure that the default Search Page works (SearchAllCept)                                                                                                           Ok
+Trying to ensure that Search Page works (SearchCept)                                                                                                                          Ok
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ApplicationTest.functional Tests (0) --------
+---------------------------------------------
+
+ApplicationTest.unit Tests (0) --------------
+---------------------------------------------
+
+
+[ApplicationTest]: tests from /Users/eddiejaoude/Development/github/elasticsearch-sandbox//module/Application
+
+
+
+Time: 1.66 seconds, Memory: 26.00Mb
+
+OK (12 tests, 36 assertions)
+```
