@@ -1,8 +1,15 @@
 # ElasticSearch Demo
 
+Application http://elasticsearch-sandbox.herokuapp.com/
+
 This Demo allows one to run the Search examples from https://github.com/TransformCore/elasticsearch-example-docs
 
-## How to run Application
+## Screenshots
+
+[Search All](docs/screenshots/search-all.png)
+[Search Filter](docs/screenshots/search-filter.png)
+
+## How to run a private instance of the Application
 
 ### Development
 
