@@ -4,7 +4,7 @@ namespace ApplicationTest;
 $I = new AcceptanceTester($scenario);
 $I->wantTo('ensure that Search Page works');
 $I->amOnPage('/');
-$I->see('Index');
+$I->see('demo');
 $I->see('Query body (json)');
 $I->dontSee('Response');
 $I->fillField('query', '
