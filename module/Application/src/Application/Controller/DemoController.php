@@ -14,7 +14,6 @@ class DemoController extends AbstractActionController
 {
     public function indexAction()
     {
-        $message      = '';
         $form         = new SearchForm();
         $searchEntity = new Search();
 
