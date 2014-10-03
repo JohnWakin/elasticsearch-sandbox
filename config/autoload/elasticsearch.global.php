@@ -1,18 +1,22 @@
 <?php
 
+if (getenv('BONSAI_USERNAME') && getenv('BONSAI_PASSWORD')) {
+    $authentication = array(
+        'auth' => array(
+            getenv('BONSAI_USERNAME'),
+            getenv('BONSAI_PASSWORD'),
+            'Basic'
+        )
+    );
+}
+
 return array(
     'elasticsearch' => array(
         'cluster' => array(
             'hosts'            => array(
                 getenv('BONSAI_URL')
             ),
-            'connectionParams' => array(
-                'auth' => array(
-                    getenv('BONSAI_USERNAME'),
-                    getenv('BONSAI_PASSWORD'),
-                    'Basic'
-                )
-            )
+            'connectionParams' => $authentication
         ),
         'indexes' => array(
             'demo' => array(
