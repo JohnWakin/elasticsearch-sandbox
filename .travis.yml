@@ -29,7 +29,7 @@ after_success:
   - export GIT_TAG=build-$TRAVIS_BRANCH-$(date -u "+%Y-%m-%d")-$TRAVIS_BUILD_NUMBER
   - echo -n $GIT_TAG > public/version
   - git log `git describe --tags --abbrev=0`..HEAD --oneline > public/changelog
-  - git commit -m "Set build VERSION number" public/version
+  - git commit -m "Set build VERSION number" public/version public/changelog
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER"
   - git push --quiet https://$GITHUBKEY@github.com/TransformCore/elasticsearch-sandbox $GIT_TAG > /dev/null 2>&1
 
