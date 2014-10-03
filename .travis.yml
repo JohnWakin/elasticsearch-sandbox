@@ -11,6 +11,7 @@ install:
 
 before_script:
   - BONSAI_URL=http://127.0.0.1 php -d variables_order=EGPCS -S 0.0.0.0:8000 -t public/ &
+  - php public/index.php load data demo
 
 script:
   - vendor/bin/codecept run --env travis
