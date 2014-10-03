@@ -5,7 +5,7 @@ php:
   - 5.6
 
 env:
-  - BONSAI_UR=127.0.0.1 BONSAI_USERNAME='' BONSAI_PASSWORD=''
+  - BONSAI_UR='127.0.0.1' BONSAI_USERNAME='' BONSAI_PASSWORD=''
 
 services:
   - elasticsearch
