@@ -23,3 +23,6 @@ before_script:
 
 script:
   - vendor/bin/codecept run --env travis
+
+after_failure:
+  - "cat tests/_output/*"
