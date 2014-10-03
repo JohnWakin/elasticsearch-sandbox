@@ -31,12 +31,14 @@ class DemoController extends AbstractActionController
                         ->get('application.service.elasticsearch')
                         ->search($searchEntity);
                 } catch (\Exception $e) {
-                    error_log($e->getMessage()); // @TODO: implement logging service
+                    $this->getServiceLocator()
+                        ->get('log.app')
+                        ->emerg($e->getMessage());
                     $searchEntity->setResult(json_decode($e->getMessage(), true));
                 }
             }
         }
-
+        
         return new ViewModel(
             array(
                 'form'         => $form,
