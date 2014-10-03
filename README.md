@@ -27,7 +27,7 @@ This Demo allows one to run the Search Examples from https://github.com/Transfor
 `BONSAI_URL={ELASTIC-SEARCH-URL} BONSAI_USERNAME={ELASTIC-SEARCH-USERNAME} BONSAI_PASSWORD={ELASTIC-SEARCH-PASSWORD} php -d variables_order=EGPCS -S 0.0.0.0:8000 -t public/`
 
 3. Load dummy data
-`php public/index.php load data demo`
+`BONSAI_URL={ELASTIC-SEARCH-URL} BONSAI_USERNAME={ELASTIC-SEARCH-USERNAME} BONSAI_PASSWORD={ELASTIC-SEARCH-PASSWORD} php public/index.php load data demo`
 
 3. Then go to that port in your browser http://localhost:8000 & start playing
 
