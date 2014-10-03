@@ -1,0 +1,5 @@
+d13e996 Added Changelog to Git Tag
+758bca9 Changeling displayed in Footer of layout
+1f5fac8 On Tag, create Changelog from previous Tag
+8b348e0 Build against PHP v5.6
+9495951 Packaged Version displayed on Layout
