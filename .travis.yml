@@ -20,3 +20,7 @@ after_failure:
   - "cat tests/_output/*"
   - "cat module/Application/tests/_output/*"
   - "cat data/logs/app.log"
+
+branches:
+  except:
+    - /^build-[0-9a-z\-]*/
