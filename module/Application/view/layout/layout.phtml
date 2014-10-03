@@ -50,6 +50,7 @@
             <hr>
             <footer>
                 <p>&copy; <?php echo date('Y') ?> by Transform UK. <?php echo $this->translate('All rights reserved.') ?></p>
+                <p>Version: <?php echo file_get_contents('public/version'); ?></p>
             </footer>
         </div> <!-- /container -->
         <?php echo $this->inlineScript() ?>
