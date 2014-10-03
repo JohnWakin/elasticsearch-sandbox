@@ -12,9 +12,3 @@ modules:
     config:
         PhpBrowser:
             url: 'http://localhost:8000'
-env:
-    travis:
-         modules:
-            config:
-                PhpBrowser:
-                    url: 'http://localhost'
