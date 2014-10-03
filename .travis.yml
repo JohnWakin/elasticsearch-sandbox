@@ -5,7 +5,7 @@ php:
   - 5.6
 
 env:
-  - BONSAI_URL='http://127.0.0.1'
+  - BONSAI_URL='127.0.0.1'
 
 services:
   - elasticsearch
