@@ -1,5 +1,6 @@
 <?php
 
+$authentication = array();
 if (getenv('BONSAI_USERNAME') && getenv('BONSAI_PASSWORD')) {
     $authentication = array(
         'auth' => array(
