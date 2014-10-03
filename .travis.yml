@@ -26,3 +26,4 @@ script:
 
 after_failure:
   - "cat tests/_output/*"
+  - "cat module/Application/tests/_output/*"
