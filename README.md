@@ -1,3 +1,5 @@
+[![Dependency Status](https://www.versioneye.com/user/projects/542e331ebeeeeefccb000138/badge.svg?style=flat)](https://www.versioneye.com/user/projects/542e331ebeeeeefccb000138)
+
 # ElasticSearch Demo
 
 URL: http://elasticsearch-sandbox.herokuapp.com/
