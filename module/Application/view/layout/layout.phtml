@@ -50,8 +50,11 @@
             <hr>
             <footer>
                 <p>&copy; <?php echo date('Y') ?> by Transform UK. <?php echo $this->translate('All rights reserved.') ?></p>
-                <p>Version: <?php echo file_get_contents('public/version'); ?></p>
+                <p>Version: <b><?php echo file_get_contents('public/version'); ?></b></p>
             </footer>
+            <hr>
+            <h4>Changelog</h4>
+            <p><?php echo nl2br(file_get_contents('public/changelog')); ?></p>
         </div> <!-- /container -->
         <?php echo $this->inlineScript() ?>
     </body>
