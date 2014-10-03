@@ -21,6 +21,20 @@ after_failure:
   - "cat module/Application/tests/_output/*"
   - "cat data/logs/app.log"
 
+after_success:
+  # CREATE GIT TAG
+  - git config --global user.email "builds@travis-ci.com"
+  - git config --global user.name "Travis CI"
+  - export GIT_TAG=build-$TRAVIS_BRANCH-$(date -u "+%Y-%m-%d")-$TRAVIS_BUILD_NUMBER
+  - echo -n $GIT_TAG > public/version
+  - git commit -m "Set build VERSION number" public/version
+  - git tag $GIT_TAG -a -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER"
+  - git push --quiet https://$GITHUBKEY@github.com/TransformCore/elasticsearch-sandbox $GIT_TAG > /dev/null 2>&1
+
 branches:
   except:
     - /^build-[0-9a-z\-]*/
+
+env:
+  global:
+    - secure: "ORNswedPTq2rxT/q0GtnQ6J93W00jvNG9zwgiE9jKbrNvpwWarChMKhNY5ZCi34cn/wBD+kIw0QoMKdSDEt81yVSrnQlSpGUTVAfqJcWqD4+SiV7qOOAjB1SGoXnDa9KssHbyBghN/WAuBTRIZD4veTAbWdDMEc/l/3T6RHA+h8="
