@@ -74,11 +74,13 @@ ApplicationTest.unit Tests (0) --------------
 ---------------------------------------------
 
 
-[ApplicationTest]: tests from /Users/eddiejaoude/Development/github/elasticsearch-sandbox//module/Application
-
-
+[ApplicationTest]: tests from /Users/eddiejaoude/Development/github/elasticsearch-sandbox/module/Application
 
 Time: 1.66 seconds, Memory: 26.00Mb
 
 OK (12 tests, 36 assertions)
 ```
+
+### Screenshot
+
+![Test Results](docs/screenshots/test-results.png)
