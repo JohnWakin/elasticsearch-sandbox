@@ -31,6 +31,7 @@ class DemoController extends AbstractActionController
                         ->get('application.service.elasticsearch')
                         ->search($searchEntity);
                 } catch (\Exception $e) {
+                    error_log($e->getMessage()); // @TODO: implement logging service
                     $searchEntity->setResult(json_decode($e->getMessage(), true));
                 }
             }
