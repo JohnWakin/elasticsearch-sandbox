@@ -4,7 +4,7 @@ return array(
     'elasticsearch' => array(
         'cluster' => array(
             'hosts'            => array(
-                getenv('BONSAI_URL')
+                getenv('ES_URL')
             )
         ),
         'indexes' => array(

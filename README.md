@@ -26,10 +26,10 @@ This Demo allows one to run the Search Examples from https://github.com/Transfor
 `php composer.phar install`
 
 2. Run PHP Built-in Webserver
-`BONSAI_URL={ELASTIC-SEARCH-URL} BONSAI_USERNAME={ELASTIC-SEARCH-USERNAME} BONSAI_PASSWORD={ELASTIC-SEARCH-PASSWORD} php -d variables_order=EGPCS -S 0.0.0.0:8000 -t public/`
+`ES_URL={ELASTIC-SEARCH-URL} ES_USERNAME={ELASTIC-SEARCH-USERNAME} ES_PASSWORD={ELASTIC-SEARCH-PASSWORD} php -d variables_order=EGPCS -S 0.0.0.0:8000 -t public/`
 
 3. Load dummy data
-`BONSAI_URL={ELASTIC-SEARCH-URL} BONSAI_USERNAME={ELASTIC-SEARCH-USERNAME} BONSAI_PASSWORD={ELASTIC-SEARCH-PASSWORD} php public/index.php load data demo`
+`ES_URL={ELASTIC-SEARCH-URL} ES_USERNAME={ELASTIC-SEARCH-USERNAME} ES_PASSWORD={ELASTIC-SEARCH-PASSWORD} php public/index.php load data demo`
 
 3. Then go to that port in your browser http://localhost:8000 & start playing
 
