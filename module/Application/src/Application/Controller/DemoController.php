@@ -34,11 +34,11 @@ class DemoController extends AbstractActionController
                     $this->getServiceLocator()
                         ->get('log.app')
                         ->emerg($e->getMessage());
-                    $searchEntity->setResult(json_decode($e->getMessage(), true));
+                    $searchEntity->setResult(array('Error' => $e->getMessage()));
                 }
             }
         }
-        
+
         return new ViewModel(
             array(
                 'form'         => $form,
