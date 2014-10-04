@@ -11,7 +11,7 @@ install:
   - php composer.phar install --dev --no-interaction
 
 before_script:
-  - ES_URL=http://127.0.0.1 php -d variables_order=EGPCS -S 0.0.0.0:8000 -t public/ &
+  - ES_URL=http://127.0.0.1 APP_ENV=development php -d variables_order=EGPCS -S 0.0.0.0:8000 -t public/ &
   - ES_URL=http://127.0.0.1 php public/index.php load data demo
 
 script:
