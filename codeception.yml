@@ -17,3 +17,8 @@ modules:
             user: ''
             password: ''
             dump: tests/_data/dump.sql
+coverage:
+    remote: true
+    enabled: true
+    include:
+        - module/Application/src/*
