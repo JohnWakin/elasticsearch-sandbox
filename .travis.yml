@@ -17,6 +17,10 @@ before_script:
 script:
   - vendor/bin/codecept run --env travis
 
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover tests/_output/coverage.xml
+
 after_failure:
   - "cat tests/_output/*"
   - "cat module/Application/tests/_output/*"
