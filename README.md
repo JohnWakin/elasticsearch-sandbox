@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/TransformCore/elasticsearch-sandbox.svg?branch=master)](https://travis-ci.org/TransformCore/elasticsearch-sandbox) 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/TransformCore/elasticsearch-sandbox/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/TransformCore/elasticsearch-sandbox/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/TransformCore/elasticsearch-sandbox/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/TransformCore/elasticsearch-sandbox/?branch=master)
 
 composer.lock [![Dependency Status](https://www.versioneye.com/user/projects/542e331ebeeeeefccb000138/badge.svg?style=flat)](https://www.versioneye.com/user/projects/542e331ebeeeeefccb000138)
 
