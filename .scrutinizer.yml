@@ -5,3 +5,6 @@ checks:
     php:
         code_rating: true
         duplication: true
+filter:
+    paths:
+        - module/Application/src/*
