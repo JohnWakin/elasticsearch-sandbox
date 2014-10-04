@@ -1,0 +1,13 @@
+230e1b5 Push PHP Clover code coverage to Scrutinizer
+ac8c89c Zf2 Codeception code coverage dev module added
+aed0f57 Codeception Code coverage config enabled
+455eb3f Codeception c3 remote code coverage file ignored
+a226510 Removed unused variable
+ddf58b2 Static Code Analysis Badge added to README
+36ff4ba #14 SlugIgnore added for Deployment Performance
+3ba241b Removed Travis hidden config folder
+d13e996 Added Changelog to Git Tag
+758bca9 Changeling displayed in Footer of layout
+1f5fac8 On Tag, create Changelog from previous Tag
+8b348e0 Build against PHP v5.6
+9495951 Packaged Version displayed on Layout
