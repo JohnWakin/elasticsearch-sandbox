@@ -15,7 +15,7 @@ before_script:
   - ES_URL=http://127.0.0.1 php public/index.php load data demo
 
 script:
-  - vendor/bin/codecept run --env travis
+  - vendor/bin/codecept run --env travis --coverage --coverage-xml
 
 after_script:
   - wget https://scrutinizer-ci.com/ocular.phar
