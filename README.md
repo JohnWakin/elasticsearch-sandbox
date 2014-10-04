@@ -84,6 +84,16 @@ Time: 1.66 seconds, Memory: 26.00Mb
 OK (12 tests, 36 assertions)
 ```
 
-### Screenshot
+### Codeception Test Results Screenshot
 
 ![Test Results](docs/screenshots/test-results.png)
+
+## Screenshots
+
+Travis CI
+
+![Travis CI](docs/screenshots/travis-ci.png)
+
+Scrutinizer Static Code Analysis
+
+![Static Code Analysis](docs/screenshots/static-code-analysis.png)
