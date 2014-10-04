@@ -14,6 +14,15 @@
     },
     "require-dev": {
         "codeception/codeception": "2.0.*",
-        "codeception/mockery-module": "*"
+        "codeception/mockery-module": "*",
+        "eddiejaoude/codeception-zf2-codecoverage": "dev-master"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Codeception\\c3\\Installer::copyC3ToRoot"
+        ],
+        "post-update-cmd": [
+            "Codeception\\c3\\Installer::copyC3ToRoot"
+        ]
     }
 }
