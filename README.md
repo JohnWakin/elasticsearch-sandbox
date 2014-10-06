@@ -8,6 +8,8 @@ composer.json [![Dependency Status](https://www.versioneye.com/user/projects/542
 
 # ElasticSearch Demo
 
+**Note: This Application sleeps when not in use, therefore the first request after sleeping will be slower while it boots.**
+
 URL: http://elasticsearch-sandbox.herokuapp.com/
 
 This Demo allows one to run the Search Examples from https://github.com/TransformCore/elasticsearch-example-docs
