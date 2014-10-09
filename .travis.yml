@@ -18,15 +18,13 @@ script:
   - vendor/bin/codecept run --coverage --coverage-xml --env travis
 
 after_script:
-  - ls -l tests/_output/
-  - cat tests/_output/*
   - wget https://scrutinizer-ci.com/ocular.phar
   - php ocular.phar code-coverage:upload --format=php-clover tests/_output/coverage.xml
 
 after_failure:
-  - "cat tests/_output/*"
-  - "cat module/Application/tests/_output/*"
-  - "cat data/logs/app.log"
+  - cat tests/_output/*
+  - cat module/Application/tests/_output/*
+  - cat data/logs/app.log
 
 after_success:
   # CREATE GIT TAG
