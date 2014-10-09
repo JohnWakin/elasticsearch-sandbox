@@ -43,6 +43,10 @@ Example Searches with **Dummy Data** https://github.com/TransformCore/elasticsea
 
 `vendor/bin/codecept run`
 
+or with Code Coverage
+
+`vendor/bin/codecept run --coverage --coverage-xml`
+
 Output:
 ```
 vendor/bin/codecept run
