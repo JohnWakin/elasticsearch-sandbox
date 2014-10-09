@@ -18,6 +18,8 @@ script:
   - vendor/bin/codecept run --coverage --coverage-xml --env travis
 
 after_script:
+  - ls -l tests/_output/
+  - cat tests/_output/*
   - wget https://scrutinizer-ci.com/ocular.phar
   - php ocular.phar code-coverage:upload --format=php-clover tests/_output/coverage.xml
 
