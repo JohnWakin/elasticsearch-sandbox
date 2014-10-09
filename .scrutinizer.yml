@@ -1,3 +1,5 @@
+imports:
+    - php
 tools:
   external_code_coverage:
           timeout: 600
@@ -8,3 +10,7 @@ checks:
 filter:
     paths:
         - module/Application/src/*
+tools:
+    php_sim: true
+    php_pdepend: true
+    php_analyzer: true
