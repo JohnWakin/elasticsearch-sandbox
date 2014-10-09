@@ -1,0 +1,6 @@
+2e9cda3 Updated Scrutinizer config to default code coverage timeout
+d5b8a7a Updated Scrutinizer config
+85c9e24 Removed Debug data to travis config
+e249b77 Debug data to travis config
+d0ad5d8 Moved around code coverage parameters
+8770a0b Updated composer phar
