@@ -1,0 +1,13 @@
+1e2b483 Fixed ElasticSearch config when using local vars
+5024146 Updated composer config with relevant info
+c9167b7 Updated README formatting
+82555c7 Updated README with setting Config variables
+5edec4c Removed unrequired config
+0960607 #15 Added code coverage command to README
+1f198cc Formatting config
+2e9cda3 Updated Scrutinizer config to default code coverage timeout
+d5b8a7a Updated Scrutinizer config
+85c9e24 Removed Debug data to travis config
+e249b77 Debug data to travis config
+d0ad5d8 Moved around code coverage parameters
+8770a0b Updated composer phar
