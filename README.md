@@ -35,7 +35,9 @@ This Demo allows one to run the Search Examples from https://github.com/Transfor
 3. Load dummy data
 `ES_URL={ELASTIC-SEARCH-URL} ES_USERNAME={ELASTIC-SEARCH-USERNAME} ES_PASSWORD={ELASTIC-SEARCH-PASSWORD} php public/index.php load data demo`
 
-3. Then go to that port in your browser http://localhost:8000 & start playing
+4. Then go to that port in your browser http://localhost:8000 & start playing
+
+Note: Instead of putting the ENV variables infront of the comands, you can either set them as ENV variables in your system or the simplest method is to copy `elasticsearch.local.php.dist` to a file called `elasticsearch.local.php` and replace the variables.
 
 Example Searches with **Dummy Data** https://github.com/TransformCore/elasticsearch-example-docs
 

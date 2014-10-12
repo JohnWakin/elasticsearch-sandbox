@@ -1,0 +1,26 @@
+<?php
+
+return array(
+    'elasticsearch' => array(
+        'cluster' => array(
+            'hosts'            => array(
+                /* ELASTICSEARCH URL HERE */
+            ),
+            // connectionParams IS OPTIONAL - REMOVE IF NOT REQUIRED
+            'connectionParams' => array(
+                'auth' => array(
+                    /* ELASTICSEARCH USERNAME */,
+                    /* ELASTICSEARCH PASSWORD */,
+                    'Basic'
+                )
+            )
+            // -----------------------------------------------------
+        ),
+        'indexes' => array(
+            'demo' => array(
+                'index'   => 'demo',
+                'mapping' => array()
+            )
+        )
+    )
+);
