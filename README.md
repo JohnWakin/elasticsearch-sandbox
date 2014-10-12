@@ -39,6 +39,11 @@ This Demo allows one to run the Search Examples from https://github.com/Transfor
 
 Note: Instead of putting the ENV variables infront of the comands, you can either set them as ENV variables in your system or the simplest method is to copy `elasticsearch.local.php.dist` to a file called `elasticsearch.local.php` and replace the variables.
 
+`elasticsearch.local.php` type files (i.e. `*.local.php`) are ignored by Git, therefore this will never be tracked & committed to the repository.
+
+Then use the following command to start the webserver:
+`php -S 0.0.0.0:8000 -t public/`
+
 > Example Searches with **Dummy Data** https://github.com/TransformCore/elasticsearch-example-docs
 
 ### How to run Test Suite
