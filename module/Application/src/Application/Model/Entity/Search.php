@@ -34,6 +34,51 @@ class Search implements InputFilterAwareInterface
     protected $inputFilter;
 
     /**
+     * @Type("array")
+     * @var array
+     * @ReadOnly
+     */
+    protected $errorMessages = array();
+
+    /**
+     * Is the Entity valid
+     *
+     * If no validator keys are passed, all will be used
+     * Optionally, a partial validation is done
+     *
+     * Usage
+     * 1. $entity->isValid() // all validators are validated
+     * 2. $entity->isValid(array('firstname')) // only 'firstname' is validated
+     *
+     * @param array $validations
+     *
+     * @return bool
+     */
+    public function isValid(array $validations = null)
+    {
+        $inputFilter = $this->getInputFilter()
+            ->setData(get_object_vars($this));
+
+        if (!is_null($validations) && is_array($validations)) {
+            $inputFilter->setValidationGroup($validations);
+        }
+
+        $isValid = $inputFilter->isValid();
+
+        $this->errorMessages = $this->getInputFilter()->getMessages();
+
+        return $isValid;
+    }
+
+    /**
+     * @return array
+     */
+    public function getErrorMessages()
+    {
+        return array('errors' => $this->errorMessages);
+    }
+
+    /**
      * @param array $data
      * @return Search
      */

@@ -68,4 +68,32 @@ class SearchEntityTest extends \Codeception\TestCase\Test
         $this->assertInstanceOf('Zend\InputFilter\InputFilter', $this->entity->getInputFilter());
         $this->assertEquals(2, $this->entity->getInputFilter()->count());
     }
+
+    public function testValidationSuccessful()
+    {
+        $data = array(
+            'index'  => 'test-index',
+            'query'  => json_encode(array('name' => 'value'))
+        );
+
+        $this->assertInstanceOf('Application\Model\Entity\Search', $this->entity->exchangeArray($data));
+
+        $this->assertTrue($this->entity->isValid());
+
+        $this->assertEmpty($this->entity->getErrorMessages()['errors']);
+    }
+
+    public function testValidationFailure()
+    {
+        $data = array(
+            'index'  => '',
+            'query'  => ''
+        );
+
+        $this->assertInstanceOf('Application\Model\Entity\Search', $this->entity->exchangeArray($data));
+
+        $this->assertFalse($this->entity->isValid());
+        $this->assertNotEmpty($this->entity->getErrorMessages());
+        $this->assertEquals(2, count($this->entity->getErrorMessages()['errors']));
+    }
 }
