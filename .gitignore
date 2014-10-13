@@ -4,3 +4,7 @@
 .idea
 vendor/
 c3.php
+ocular.phar
+*/AcceptanceTester.php
+*/FunctionalTester.php
+*/UnitTester.php
