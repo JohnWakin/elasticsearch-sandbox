@@ -48,17 +48,17 @@ Then use the following command to start the webserver:
 
 ### How to run Test Suite
 
-`vendor/bin/codecept run`
+#### Standard testing suite command
 
-or with Code Coverage
-
-`vendor/bin/codecept run --coverage --coverage-xml`
+```
+vendor/bin/codecept run
+```
 
 Output:
 ```
-vendor/bin/codecept run
-Codeception PHP Testing Framework v2.0.5
-Powered by PHPUnit 4.2.6 by Sebastian Bergmann.
+$ vendor/bin/codecept run 
+Codeception PHP Testing Framework v2.0.7
+Powered by PHPUnit 4.3.1 by Sebastian Bergmann.
 
 Acceptance Tests (0) ------------------------
 ---------------------------------------------
@@ -66,7 +66,7 @@ Acceptance Tests (0) ------------------------
 Functional Tests (0) ------------------------
 ---------------------------------------------
 
-Unit Tests (10) ---------------------------------------------------------------------------------------------------------------------------------------
+Unit Tests (11) ---------------------------------------------------------------------------------------------------------------------------------------
 Trying to test create service (ApplicationTest\Factory\ElasticSearchClientTest::testCreateService)                                                Ok
 Trying to test create service (ApplicationTest\Factory\ElasticSearchServiceTest::testCreateService)                                               Ok
 Trying to test form (ApplicationTest\Form\SearchFormTest::testForm)                                                                               Ok
@@ -74,7 +74,8 @@ Trying to test instance (ApplicationTest\Model\Entity\SearchEntityTest::testInst
 Trying to test exchange array empty (ApplicationTest\Model\Entity\SearchEntityTest::testExchangeArrayEmpty)                                       Ok
 Trying to test exchange array (ApplicationTest\Model\Entity\SearchEntityTest::testExchangeArray)                                                  Ok
 Trying to test get input filter (ApplicationTest\Model\Entity\SearchEntityTest::testGetInputFilter)                                               Ok
-Trying to test validation (ApplicationTest\Model\Entity\SearchEntityTest::testValidation)                                                         Ok
+Trying to test validation successful (ApplicationTest\Model\Entity\SearchEntityTest::testValidationSuccessful)                                    Ok
+Trying to test validation failure (ApplicationTest\Model\Entity\SearchEntityTest::testValidationFailure)                                          Ok
 Trying to test instance (ApplicationTest\Service\ElasticSearchTest::testInstance)                                                                 Ok
 Trying to test search (ApplicationTest\Service\ElasticSearchTest::testSearch)                                                                     Ok
 -------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -91,11 +92,35 @@ ApplicationTest.unit Tests (0) --------------
 ---------------------------------------------
 
 
-[ApplicationTest]: tests from /Users/eddiejaoude/Development/github/elasticsearch-sandbox/module/Application
+[ApplicationTest]: tests from /Users/eddiejaoude/Development/github/elasticsearch-sandbox//module/Application
 
-Time: 1.66 seconds, Memory: 26.00Mb
 
-OK (12 tests, 36 assertions)
+
+Time: 6.16 seconds, Memory: 27.00Mb
+
+OK (13 tests, 43 assertions)
+```
+
+
+#### Run Test Suites in Parallel (Unit, Functional, Acceptance)
+
+```
+vendor/bin/robo parallel:all
+```
+
+Output:
+```
+$ vendor/bin/robo parallel:all
+ [Robo\Task\ParallelExecTask] vendor/bin/codecept run --xml tests/_log/unit.xml unit
+ [Robo\Task\ParallelExecTask] vendor/bin/codecept run --xml tests/_log/functional.xml functional
+ [Robo\Task\ParallelExecTask] vendor/bin/codecept run --xml tests/_log/acceptance.xml acceptance
+ [Robo\Task\ParallelExecTask] Processes: 3/3 [============================] 100%
+ [Robo\Task\ParallelExecTask] 3 processes ended in 2.74 s
+ [Codeception\Task\MergeXmlReportsTask] Merging JUnit XML reports into tests/_output/tests/_log/result.xml
+ [Codeception\Task\MergeXmlReportsTask] Processing tests/_output/tests/_log/unit.xml
+ [Codeception\Task\MergeXmlReportsTask] Processing tests/_output/tests/_log/functional.xml
+ [Codeception\Task\MergeXmlReportsTask] Processing tests/_output/tests/_log/acceptance.xml
+ [Codeception\Task\MergeXmlReportsTask] File tests/_output/tests/_log/result.xml saved. 2 suites added
 ```
 
 ### Codeception Test Results Screenshot
