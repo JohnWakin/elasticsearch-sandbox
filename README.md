@@ -48,7 +48,65 @@ Then use the following command to start the webserver:
 
 ### How to run Test Suite
 
-`vendor/bin/robo parallel:all`
+#### Standard testing suite command
+
+```
+vendor/bin/codecept run
+```
+
+Output:
+```
+$ vendor/bin/codecept run 
+Codeception PHP Testing Framework v2.0.7
+Powered by PHPUnit 4.3.1 by Sebastian Bergmann.
+
+Acceptance Tests (0) ------------------------
+---------------------------------------------
+
+Functional Tests (0) ------------------------
+---------------------------------------------
+
+Unit Tests (11) ---------------------------------------------------------------------------------------------------------------------------------------
+Trying to test create service (ApplicationTest\Factory\ElasticSearchClientTest::testCreateService)                                                Ok
+Trying to test create service (ApplicationTest\Factory\ElasticSearchServiceTest::testCreateService)                                               Ok
+Trying to test form (ApplicationTest\Form\SearchFormTest::testForm)                                                                               Ok
+Trying to test instance (ApplicationTest\Model\Entity\SearchEntityTest::testInstance)                                                             Ok
+Trying to test exchange array empty (ApplicationTest\Model\Entity\SearchEntityTest::testExchangeArrayEmpty)                                       Ok
+Trying to test exchange array (ApplicationTest\Model\Entity\SearchEntityTest::testExchangeArray)                                                  Ok
+Trying to test get input filter (ApplicationTest\Model\Entity\SearchEntityTest::testGetInputFilter)                                               Ok
+Trying to test validation successful (ApplicationTest\Model\Entity\SearchEntityTest::testValidationSuccessful)                                    Ok
+Trying to test validation failure (ApplicationTest\Model\Entity\SearchEntityTest::testValidationFailure)                                          Ok
+Trying to test instance (ApplicationTest\Service\ElasticSearchTest::testInstance)                                                                 Ok
+Trying to test search (ApplicationTest\Service\ElasticSearchTest::testSearch)                                                                     Ok
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ApplicationTest.acceptance Tests (2) ----------------------------------------------------------------------------------------------------------------------------------------------
+Trying to ensure that the default Search Page works (SearchAllCept)                                                                                                           Ok
+Trying to ensure that Search Page works (SearchCept)                                                                                                                          Ok
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ApplicationTest.functional Tests (0) --------
+---------------------------------------------
+
+ApplicationTest.unit Tests (0) --------------
+---------------------------------------------
+
+
+[ApplicationTest]: tests from /Users/eddiejaoude/Development/github/elasticsearch-sandbox//module/Application
+
+
+
+Time: 6.16 seconds, Memory: 27.00Mb
+
+OK (13 tests, 43 assertions)
+```
+
+
+#### Run Test Suites in Parallel (Unit, Functional, Acceptance)
+
+```
+vendor/bin/robo parallel:all
+```
 
 Output:
 ```
