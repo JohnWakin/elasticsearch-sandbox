@@ -1,0 +1,29 @@
+{
+  "name": "ElasticSearch Sandbox",
+  "description": "ElasticSearch Sandbox App to test your Queries.",
+  "keywords": [
+    "ElasticSearch",
+    "Sandbox",
+    "ElasticSearch Sandbox"
+  ],
+  "website": "http://elasticsearch-sandbox.herokuapp.com",
+  "repository": "https://github.com/TransformCore/elasticsearch-sandbox",
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": "bundle exec rake bootstrap"
+  },
+  "env": {
+    "BUILDPACK_URL": "https://github.com/stomita/heroku-buildpack-phantomjs",
+    "SECRET_TOKEN": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
+    "WEB_CONCURRENCY": {
+      "description": "The number of processes to run.",
+      "value": "1"
+    }
+  },
+  "addons": [
+    "bonsai:starter"
+  ]
+}
