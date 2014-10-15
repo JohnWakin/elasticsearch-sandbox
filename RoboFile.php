@@ -8,11 +8,17 @@ class Robofile extends \Robo\Tasks
     use \Codeception\Task\MergeReports;
     use \Codeception\Task\SplitTestsByGroups;
 
+    /**
+     * Used to split tests
+     */
     public function parallelSplitTests()
     {
 
     }
 
+    /**
+     * @return \Robo\Result
+     */
     public function parallelRun()
     {
         $parallel = $this->taskParallelExec();
@@ -37,6 +43,9 @@ class Robofile extends \Robo\Tasks
         return $parallel->run();
     }
 
+    /**
+     * @throws \Robo\Task\Shared\TaskException
+     */
     public function parallelMergeResults()
     {
         $this->taskMergeXmlReports()
@@ -47,6 +56,9 @@ class Robofile extends \Robo\Tasks
             ->run();
     }
 
+    /**
+     * @return \Robo\Result
+     */
     function parallelAll()
     {
         $result = $this->parallelRun();
