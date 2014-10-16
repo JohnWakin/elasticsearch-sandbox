@@ -14,9 +14,19 @@
         "elasticsearch/elasticsearch": "~1.0"
     },
     "require-dev": {
-        "codeception/codeception": "2.0.*",
+        "codeception/codeception": "2.*",
         "codeception/mockery-module": "*",
-        "eddiejaoude/codeception-zf2-codecoverage": "dev-master"
+        "eddiejaoude/codeception-zf2-codecoverage": "dev-master",
+        "codegyre/robo": "*",
+        "codeception/robo-paracept":"@dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "Application\\": "module/Application/src",
+            "classmap": [
+                "Robo.php"
+            ]
+        }
     },
     "scripts": {
         "post-install-cmd": [
