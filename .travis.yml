@@ -42,3 +42,4 @@ deploy:
   app: elasticsearch-sandbox-ci
   on:
     repo: TransformCore/elasticsearch-sandbox
+    all_branches: true
