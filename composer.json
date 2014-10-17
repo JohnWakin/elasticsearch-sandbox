@@ -30,8 +30,7 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "Codeception\\c3\\Installer::copyC3ToRoot",
-            "php public/index.php load data demo"
+            "Codeception\\c3\\Installer::copyC3ToRoot"
         ],
         "post-update-cmd": [
             "Codeception\\c3\\Installer::copyC3ToRoot"
