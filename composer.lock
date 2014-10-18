@@ -839,30 +839,30 @@
         },
         {
             "name": "codegyre/robo",
-            "version": "0.4.5",
+            "version": "0.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codegyre/Robo.git",
-                "reference": "12518fe1565c777ab85c676979636bc43406db2f"
+                "reference": "ba257924e3ff9bdcb9899225e9f24957c7e4b3f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codegyre/Robo/zipball/12518fe1565c777ab85c676979636bc43406db2f",
-                "reference": "12518fe1565c777ab85c676979636bc43406db2f",
+                "url": "https://api.github.com/repos/Codegyre/Robo/zipball/ba257924e3ff9bdcb9899225e9f24957c7e4b3f3",
+                "reference": "ba257924e3ff9bdcb9899225e9f24957c7e4b3f3",
                 "shasum": ""
             },
             "require": {
                 "henrikbjorn/lurker": "1.0.*@dev",
                 "php": ">=5.4.0",
-                "symfony/console": "*",
-                "symfony/filesystem": "*",
-                "symfony/finder": "*",
-                "symfony/process": "*"
+                "symfony/console": "~2.1",
+                "symfony/filesystem": "~2.1",
+                "symfony/finder": "~2.1",
+                "symfony/process": "~2.1"
             },
             "require-dev": {
-                "codeception/aspect-mock": "*",
-                "codeception/codeception": "@dev",
-                "codeception/verify": "*"
+                "codeception/aspect-mock": "0.4.*",
+                "codeception/codeception": "~2.0",
+                "codeception/verify": "0.2.*"
             },
             "bin": [
                 "robo"
@@ -884,24 +884,24 @@
                 }
             ],
             "description": "Modern task runner",
-            "time": "2014-08-05 04:07:15"
+            "time": "2014-10-17 00:55:05"
         },
         {
             "name": "doctrine/instantiator",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "8806c41c178ad4a2e87294b851d730779555d252"
+                "reference": "f976e5de371104877ebc89bd8fecb0019ed9c119"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/8806c41c178ad4a2e87294b851d730779555d252",
-                "reference": "8806c41c178ad4a2e87294b851d730779555d252",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/f976e5de371104877ebc89bd8fecb0019ed9c119",
+                "reference": "f976e5de371104877ebc89bd8fecb0019ed9c119",
                 "shasum": ""
             },
             "require": {
-                "php": "~5.3"
+                "php": ">=5.3,<8.0-DEV"
             },
             "require-dev": {
                 "athletic/athletic": "~0.1.8",
@@ -938,7 +938,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2014-10-04 22:48:25"
+            "time": "2014-10-13 12:58:55"
         },
         {
             "name": "eddiejaoude/codeception-zf2-codecoverage",
@@ -1529,16 +1529,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.3.1",
+            "version": "4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "06005259429c156c02596add91f6a59c7dc3d4af"
+                "reference": "5a0bc4dcbb7340c0a9a9bc3507854a67c564edc4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/06005259429c156c02596add91f6a59c7dc3d4af",
-                "reference": "06005259429c156c02596add91f6a59c7dc3d4af",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/5a0bc4dcbb7340c0a9a9bc3507854a67c564edc4",
+                "reference": "5a0bc4dcbb7340c0a9a9bc3507854a67c564edc4",
                 "shasum": ""
             },
             "require": {
@@ -1599,7 +1599,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-10-06 06:20:35"
+            "time": "2014-10-16 16:53:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
