@@ -1,46 +1,44 @@
 language: php
-
 php:
-  - 5.5
-  - 5.6
-
+- 5.5
+- 5.6
 services:
-  - elasticsearch
-
+- elasticsearch
 install:
-  - php composer.phar install --dev --no-interaction
-
+- php composer.phar install --dev --no-interaction
 before_script:
-  - ES_URL=http://127.0.0.1 APP_ENV=development php -d variables_order=EGPCS -S 0.0.0.0:8000 -t public/ &
-  - ES_URL=http://127.0.0.1 php public/index.php load data demo
-
+- ES_URL=http://127.0.0.1 APP_ENV=development php -d variables_order=EGPCS -S 0.0.0.0:8000 -t public/ &
+- ES_URL=http://127.0.0.1 php public/index.php load data demo
 script:
-  - vendor/bin/codecept run --coverage --coverage-xml --env travis
-
+- vendor/bin/codecept run --coverage --coverage-xml --env travis
 after_script:
-  - wget https://scrutinizer-ci.com/ocular.phar
-  - php ocular.phar code-coverage:upload --format=php-clover tests/_output/coverage.xml
-
+- wget https://scrutinizer-ci.com/ocular.phar
+- php ocular.phar code-coverage:upload --format=php-clover tests/_output/coverage.xml
 after_failure:
-  - cat tests/_output/*
-  - cat module/Application/tests/_output/*
-  - cat data/logs/app.log
-
+- cat tests/_output/*
+- cat module/Application/tests/_output/*
+- cat data/logs/app.log
 after_success:
-  # CREATE GIT TAG
-  - git config --global user.email "builds@travis-ci.com"
-  - git config --global user.name "Travis CI"
-  - export GIT_TAG=build-$TRAVIS_BRANCH-$(date -u "+%Y-%m-%d")-$TRAVIS_BUILD_NUMBER
-  - echo -n $GIT_TAG > public/version
-  - git log `git describe --tags --abbrev=0`..HEAD --oneline > public/changelog
-  - git commit -m "Set build VERSION number" public/version public/changelog
-  - git tag $GIT_TAG -a -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER"
-  - git push --quiet https://$GITHUBKEY@github.com/TransformCore/elasticsearch-sandbox $GIT_TAG > /dev/null 2>&1
-
+- git config --global user.email "builds@travis-ci.com"
+- git config --global user.name "Travis CI"
+- export GIT_TAG=build-$TRAVIS_BRANCH-$(date -u "+%Y-%m-%d")-$TRAVIS_BUILD_NUMBER
+- echo -n $GIT_TAG > public/version
+- git log `git describe --tags --abbrev=0`..HEAD --oneline > public/changelog
+- git commit -m "Set build VERSION number" public/version public/changelog
+- git tag $GIT_TAG -a -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER"
+- git push --quiet https://$GITHUBKEY@github.com/TransformCore/elasticsearch-sandbox
+  $GIT_TAG > /dev/null 2>&1
 branches:
   except:
-    - /^build-[0-9a-z\-]*/
-
+  - /^build-[0-9a-z\-]*/
 env:
   global:
-    - secure: "ORNswedPTq2rxT/q0GtnQ6J93W00jvNG9zwgiE9jKbrNvpwWarChMKhNY5ZCi34cn/wBD+kIw0QoMKdSDEt81yVSrnQlSpGUTVAfqJcWqD4+SiV7qOOAjB1SGoXnDa9KssHbyBghN/WAuBTRIZD4veTAbWdDMEc/l/3T6RHA+h8="
+  - secure: ORNswedPTq2rxT/q0GtnQ6J93W00jvNG9zwgiE9jKbrNvpwWarChMKhNY5ZCi34cn/wBD+kIw0QoMKdSDEt81yVSrnQlSpGUTVAfqJcWqD4+SiV7qOOAjB1SGoXnDa9KssHbyBghN/WAuBTRIZD4veTAbWdDMEc/l/3T6RHA+h8=
+deploy:
+  provider: heroku
+  api_key:
+    secure: K76tWfuuHR2XiZ3djD/kTvHv7hFmh1T4BkM9Mk+BUNrB5y4Dk/OYk2V11yFAaLRPF++f2oLsOP5dnDjFnZjttCer/+veylgtxS3K6dNH2A0JKTzvxnR7lAB+UA2yjkijOaqcfxk1MQfr8cO0waGIdnzJ+0G04qZoOZ08g9h2iiA=
+  app: elasticsearch-sandbox-ci
+  on:
+    repo: TransformCore/elasticsearch-sandbox
+    all_branches: true

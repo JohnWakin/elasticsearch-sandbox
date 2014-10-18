@@ -3,3 +3,4 @@ module/Application/tests/
 docs/
 composer.phar
 *.md
+vendor/
