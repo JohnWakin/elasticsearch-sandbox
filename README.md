@@ -2,9 +2,10 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/TransformCore/elasticsearch-sandbox/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/TransformCore/elasticsearch-sandbox/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/TransformCore/elasticsearch-sandbox/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/TransformCore/elasticsearch-sandbox/?branch=master)
 
-composer.lock [![Dependency Status](https://www.versioneye.com/user/projects/542e331ebeeeeefccb000138/badge.svg?style=flat)](https://www.versioneye.com/user/projects/542e331ebeeeeefccb000138)
-
-composer.json [![Dependency Status](https://www.versioneye.com/user/projects/542e3319beeeee2af1000093/badge.svg?style=flat)](https://www.versioneye.com/user/projects/542e3319beeeee2af1000093)
+| Dependency | Status |
+| ---------- | ------ |
+| `composer.lock` | [![Dependency Status](https://www.versioneye.com/user/projects/542e331ebeeeeefccb000138/badge.svg?style=flat)](https://www.versioneye.com/user/projects/542e331ebeeeeefccb000138) |
+| `composer.json` | [![Dependency Status](https://www.versioneye.com/user/projects/542e3319beeeee2af1000093/badge.svg?style=flat)](https://www.versioneye.com/user/projects/542e3319beeeee2af1000093) |
 
 # ElasticSearch Demo
 
@@ -14,7 +15,6 @@ composer.json [![Dependency Status](https://www.versioneye.com/user/projects/542
 | Environment Type | URL                                            | Notes                                   |
 | ---------------- | -----------------------------------------------| --------------------------------------- |
 | URL STABLE       | http://elasticsearch-sandbox.herokuapp.com/    | Manually deploy after testing           |
-| ---------------- | -----------------------------------------------| --------------------------------------- |
 | URL CI           | http://elasticsearch-sandbox-ci.herokuapp.com/ | After successful build *(all branches)* |
 
 This Demo allows one to run the Search Examples from https://github.com/TransformCore/elasticsearch-example-docs
