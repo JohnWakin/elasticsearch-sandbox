@@ -10,7 +10,12 @@ composer.json [![Dependency Status](https://www.versioneye.com/user/projects/542
 
 **Note: This Application sleeps when not in use, therefore the first request after sleeping will be slower while it boots.**
 
-URL: http://elasticsearch-sandbox.herokuapp.com/
+
+| Environment Type | URL                                            | Notes                                   |
+| ---------------- | -----------------------------------------------| --------------------------------------- |
+| URL STABLE       | http://elasticsearch-sandbox.herokuapp.com/    | Manually deploy after testing           |
+| ---------------- | -----------------------------------------------| --------------------------------------- |
+| URL CI           | http://elasticsearch-sandbox-ci.herokuapp.com/ | After successful build *(all branches)* |
 
 This Demo allows one to run the Search Examples from https://github.com/TransformCore/elasticsearch-example-docs
 
