@@ -1,0 +1,41 @@
+4ca5328 Fixed formatting in docs
+f180f73 Updated Docs with ENVironment types (stable, CI)
+bb9dea2 Merge pull request #27 from TransformCore/auto-ci-deploy
+30fa55b #6 Removed run cmd for load dummy data on deploy
+1a8abbe #6 Travis deploy run script to load dummy data
+d3ac70d #6 Reverted previous change with command chain
+9ee2d54 #6 Trying a custom command to load data
+50f4e27 #6 Removed load data by post composer install
+61b0388 #6 Loading dummy data after dependencies install
+402cd63 #6 Load dummy data on deployment
+384b2f0 #6 Reload dummy data on deploy
+c00c4b5 #6 Added `vendor/` directory to slugignore
+4d58c5b #6 Continuous CI deployment on all successful branches
+08d0a1a #6 Continuous CI deployment on successful build
+4ec4793 Merge pull request #24 from TransformCore/run-tests-in-parallel
+0b6c205 Added generated build files from CodeCeption running
+f278c99 Added comments
+698ff9a Added empty log file, but will tell git not to track changes
+8cd9370 Deleted log file as should be ignored & created as required by Zend Logger
+f8b9d19 Updated README with Parallel Testing Command & example output
+45b67a3 Example usage & output for Parallel Tests running
+4013b11 Revert "Removed & untracked generated files"
+406d5f1 Removed & untracked generated files
+9dde297 Running Test Suites in Parallel
+2f4a7bc Improved code coverage of Search Entity
+4d2e1f2 Updated composer dependency versions
+c2d73c6 Auto generated test files
+e846295 Updated README for use of local variables config
+1e2b483 Fixed ElasticSearch config when using local vars
+5024146 Updated composer config with relevant info
+c9167b7 Updated README formatting
+82555c7 Updated README with setting Config variables
+5edec4c Removed unrequired config
+0960607 #15 Added code coverage command to README
+1f198cc Formatting config
+2e9cda3 Updated Scrutinizer config to default code coverage timeout
+d5b8a7a Updated Scrutinizer config
+85c9e24 Removed Debug data to travis config
+e249b77 Debug data to travis config
+d0ad5d8 Moved around code coverage parameters
+8770a0b Updated composer phar
