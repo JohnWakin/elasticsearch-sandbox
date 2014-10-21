@@ -10,7 +10,7 @@
   "repository": "https://github.com/TransformCore/elasticsearch-sandbox",
   "success_url": "/",
   "scripts": {
-    "postdeploy": "bundle exec rake bootstrap"
+    "postdeploy": "php public/index.php load data demo"
   },
   "env": {
     "BUILDPACK_URL": "https://github.com/stomita/heroku-buildpack-phantomjs",
